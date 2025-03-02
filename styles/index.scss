@@ -1,0 +1,95 @@
+@use "../node_modules/nebula-atoms/styles/core" with (
+  $container-width: 820px
+);
+
+@use "./components/navbar";
+@use "./components/footer";
+
+:root {
+  --bg: #f7facc;
+  --primary: #f4f41c;
+  --accent: #ff70ba;
+  --dark: #3a3a3a;
+}
+
+@font-face {
+  font-family: "pangaia";
+  src: url("/fonts/PPPangaia-Bold.otf");
+}
+
+@font-face {
+  font-family: "open";
+  src: url("/fonts/OpenSans-Regular.ttf");
+}
+
+body {
+  font-family: "open";
+  background-color: var(--bg);
+  color: var(--dark);
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: "pangaia";
+}
+
+h1 {
+  font-size: calc(1.375rem + 1.5vw);
+}
+h2 {
+  font-size: calc(1.325rem + 0.9vw);
+}
+h3 {
+  font-size: calc(1.225rem + 0.6vw);
+}
+
+p > a,
+#navbar-menu a,
+footer a {
+  color: var(--accent);
+  font-family: "pangaia";
+  font-weight: bold;
+  font-size: 1.2rem;
+  letter-spacing: 0.5px;
+}
+
+p > img {
+  display: block;
+  margin: 3rem auto 0;
+}
+
+h2 {
+  margin-top: 4rem;
+}
+h3 {
+  margin-top: 3rem;
+}
+
+blockquote {
+  margin-top: 4rem;
+  background-color: var(--primary);
+  border-radius: 8px;
+  margin: 0;
+  padding: 1rem 2rem;
+}
+
+@mixin button {
+  background-color: var(--primary);
+  color: var(--dark);
+  padding: 8px 16px;
+  text-decoration: none;
+  border-radius: 24px;
+}
+
+.btn,
+.btn-list a {
+  @include button;
+}
+
+ul > li {
+  margin-bottom: 4px;
+}
