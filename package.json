@@ -14,7 +14,7 @@
     "script": "npx esbuild scripts/index.ts --bundle --minify --outfile=public/script.js"
   },
   "dependencies": {
-    "astro": "^5.1.1",
+    "astro": "^5.4.1",
     "esbuild": "^0.25.0",
     "nebula-atoms": "^2.1.1",
     "nebula-genesis": "^2.0.4",
