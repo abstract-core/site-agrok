@@ -1,7 +1,7 @@
 {
   "name": "nebula-pattern",
   "type": "module",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "scripts": {
     "start": "astro dev",
     "dev": "astro dev",
@@ -17,7 +17,7 @@
     "astro": "^5.4.1",
     "esbuild": "^0.25.0",
     "nebula-atoms": "^2.1.1",
-    "nebula-genesis": "^2.0.4",
+    "nebula-genesis": "^2.0.6",
     "sass": "^1.83.4"
   },
   "devDependencies": {
