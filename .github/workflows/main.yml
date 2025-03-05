@@ -60,6 +60,9 @@ jobs:
       - name: Build style
         run: npm run style
 
+      - name: Build script
+        run: npm run script
+
       - name: Build website
         run: npm run build
 
