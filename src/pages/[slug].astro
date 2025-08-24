@@ -3,12 +3,16 @@ import { extendHtml } from "nebula-atoms/extendHtml";
 import { render } from "astro:content";
 import { getCollection } from "astro:content";
 import CustomLayout from "../layouts/CustomLayout.astro";
+import { HOME_PAGE_ID } from "../consts";
 
 export async function getStaticPaths() {
   const pages = await getCollection("pages");
   return Promise.all(
     pages
-      .filter(({ data }) => data.Url?.slice(1) || data.Slug)
+      .filter(
+        ({ id, data }) =>
+          (data.Url?.slice(1) || data.Slug) && id !== HOME_PAGE_ID
+      )
       .map(async (page) => ({
         params: {
           slug: page.data.Url?.slice(1) || page.data.Slug,

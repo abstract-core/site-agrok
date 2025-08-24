@@ -1,15 +1,15 @@
 @use "../node_modules/nebula-atoms/styles/core" with (
-  $container-width: 820px
+  $container-width: 1080px
 );
-
-@use "./components/navbar";
+@use "./components/navbar" with (
+  $container-width: 1080px
+);
 @use "./components/footer";
 
 :root {
-  --bg: #f7facc;
-  --primary: #f4f41c;
-  --accent: #ff70ba;
-  --dark: #3a3a3a;
+  --bg: #374837;
+  --text: #ffffff;
+  --accent: #00aa44;
 }
 
 @font-face {
@@ -25,7 +25,7 @@
 body {
   font-family: "open";
   background-color: var(--bg);
-  color: var(--dark);
+  color: var(--text);
 }
 
 h1,
@@ -47,10 +47,16 @@ h3 {
   font-size: calc(1.225rem + 0.6vw);
 }
 
+#container {
+  margin-top: 20vh;
+  padding: 24px;
+  width: 800px;
+}
+
 p > a,
 #navbar-menu a,
 footer a {
-  color: var(--accent);
+  color: var(--text);
   font-family: "pangaia";
   font-weight: bold;
   font-size: 1.2rem;
@@ -71,15 +77,15 @@ h3 {
 
 blockquote {
   margin-top: 4rem;
-  background-color: var(--primary);
+  background-color: var(--accent);
   border-radius: 8px;
   margin: 0;
   padding: 1rem 2rem;
 }
 
 @mixin button {
-  background-color: var(--primary);
-  color: var(--dark);
+  background-color: var(--accent);
+  color: var(--text);
   padding: 8px 16px;
   text-decoration: none;
   border-radius: 24px;

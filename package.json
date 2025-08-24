@@ -1,7 +1,7 @@
 {
-  "name": "nebula-pattern",
+  "name": "nebula-agrok",
   "type": "module",
-  "version": "1.0.4",
+  "version": "0.1.0",
   "scripts": {
     "start": "astro dev",
     "build": "astro build",
@@ -16,7 +16,7 @@
     "npm:prod:atoms": "npm uninstall nebula-atoms && npm i nebula-atoms"
   },
   "dependencies": {
-    "astro": "^5.4.1",
+    "astro": "^5.13.2",
     "esbuild": "^0.25.0",
     "nebula-atoms": "^2.2.16",
     "nebula-genesis": "^2.0.11",

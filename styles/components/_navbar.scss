@@ -1,26 +1,22 @@
+$container-width: 640px !default;
+
 #navbar {
-  padding: 4rem 16px 16px 4rem;
+  padding: 16px;
   > img {
-    min-width: 800px;
+    width: 50%;
     z-index: -1;
     position: absolute;
     left: 0;
     top: 0;
-    width: 100%;
+    max-width: 480px;
   }
 }
 #navbar-brand {
-  font-size: 2rem;
-  color: var(--accent);
+  color: var(--text);
   font-family: "pangaia";
   > :first-child {
     font-size: calc(1.5rem + 4vw);
-    letter-spacing: 4px;
     line-height: calc(1rem + 4vw);
-  }
-  > :last-child {
-    color: var(--dark);
-    font-size: calc(0.8rem + 1vw);
   }
 }
 #navbar-menu-open {
@@ -32,4 +28,17 @@
 #navbar-menu-open,
 #navbar-menu-close {
   background-size: contain;
+}
+#navbar-menu a {
+  font-weight: initial !important;
+  letter-spacing: 0.05rem;
+  text-align: center;
+  text-decoration: none;
+  margin: 0 0.5rem;
+}
+
+@media (max-width: $container-width) {
+  #navbar-responsive {
+    justify-content: space-between;
+  }
 }
